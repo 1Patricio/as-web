@@ -20,10 +20,10 @@
                 <tbody>
                     @foreach($produtos as $produto)
                     <tr class="bg-gray border-b dark:bg-gray-800 dark:border-gray-700 text-white">
-                        <td class="px-6 py-4 text-center">{{ $produto['id'] }}</td>
-                        <td class="px-6 py-4">{{ $produto['descricao'] }}</td>
-                        <td class="px-6 py-4">{{ $produto['preco'] }}</td>
-                        <td class="px-6 py-4 text-center">{{ $produtos->categoria->nome }}</td>
+                        <td class="px-6 py-4 text-center">{{ $produto->id }}</td>
+                        <td class="px-6 py-4">{{ $produto->descricao }}</td>
+                        <td class="px-6 py-4">{{ $produto->preco }}</td>
+                        <td class="px-6 py-4 text-center">{{ $produto->categoria->descricao }}</td>
                         <td class="px-6 py-4 flex space-x-2 ">
                             <a href="{{ url('produto/'.$produto->id.'/produto') }}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Editar</a>
                             <form action="{{ url('produto/'.$produto->id) }}" method="POST" class="inline-block">

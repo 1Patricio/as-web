@@ -23,7 +23,7 @@ class ProdutoController extends Controller
     public function store(Request $request)
     {
         Produto::create($request->all());
-        return redirect('produtos')->with('success', 'produto created successfully.');
+        return redirect('produto')->with('success', 'produto created successfully.');
     }
     
     public function edit($id)
@@ -36,13 +36,13 @@ class ProdutoController extends Controller
     {
         $produto = Produto::findOrFail($id);
         $produto->update($request->all());
-        return redirect('produtos')->with('success', 'produto updated successfully.');
+        return redirect('produto')->with('success', 'produto updated successfully.');
     }
     
     public function destroy($id)
     {
         $produto = Produto::findOrFail($id);
         $produto->delete();
-        return redirect('produtos')->with('success', 'produto deleted successfully.');
+        return redirect('produto')->with('success', 'produto deleted successfully.');
     }
 }

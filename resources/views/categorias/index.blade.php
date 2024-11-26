@@ -12,6 +12,7 @@
                     <tr>
                         <th scope="col" class="px-6 py-3">Id</th>
                         <th scope="col" class="px-6 py-3">Descrição</th>
+                        <th scope="col" class="px-6 py-3 text-center">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
